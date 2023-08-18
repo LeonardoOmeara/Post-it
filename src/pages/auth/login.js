@@ -3,6 +3,7 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { auth } from "../../../utils/firebase";
 import { useRouter } from "next/router";
 import { useAuthState } from "react-firebase-hooks/auth";
+// Actions that occur outside the rendering AKA what doenst render, but run , like data fetching
 import { useEffect } from "react";
 
 
@@ -30,7 +31,8 @@ export default function Login(){
         if (user) {
           route.push("/");
         } else {
-          console.log("login");
+        //   route.push("/");
+            console.log("login");
         }
       }, [user]);
 
